@@ -1,0 +1,117 @@
+USE casestudy
+
+DECLARE @DynamicSQL varchar(8000)
+ 
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimCountry
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimCountry/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimSTATUS
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimSTATUS/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimPRODUCTLINE
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimPRODUCTLINE/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimDEALSIZE
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimDEALSIZE/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimProductCode
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimProductCode/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimDate
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimDate/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.Fact_Table
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/Fact_Table/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+SET @DynamicSQL = 'CREATE OR ALTER VIEW dbo.DimCUSTOMER
+AS
+SELECT * 
+FROM
+    OPENROWSET
+    (
+         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimCUSTOMER/''
+        ,FORMAT = ''delta''
+    ) AS [result]'
+ 
+EXEC (@DynamicSQL)
+
+
+
+
+
+
+
+
+--https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimCountry/
+--BULK ''abfss://preranacasestudy@preranastorage007.dfs.core.windows.net/curated/DimCountry''
