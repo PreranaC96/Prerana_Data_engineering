@@ -8,7 +8,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimCountry/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimCountry/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -20,7 +20,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimSTATUS/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimSTATUS/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -33,7 +33,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimPRODUCTLINE/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimPRODUCTLINE/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -46,7 +46,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimDEALSIZE/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimDEALSIZE/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -60,7 +60,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimProductCode/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimProductCode/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -74,7 +74,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimDate/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimDate/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -87,7 +87,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/Fact_Table/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/Fact_Table/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
@@ -100,7 +100,7 @@ SELECT *
 FROM
     OPENROWSET
     (
-         BULK ''https://preranastorage007.dfs.core.windows.net/casestudy/curated/DimCUSTOMER/''
+         BULK ''https://storageaccount.dfs.core.windows.net/xyz/curated/DimCUSTOMER/''
         ,FORMAT = ''delta''
     ) AS [result]'
  
